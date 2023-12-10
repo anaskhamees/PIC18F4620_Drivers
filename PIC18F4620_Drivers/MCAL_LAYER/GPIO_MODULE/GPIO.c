@@ -1,5 +1,5 @@
 /* 
- * File:   HAL_GPIO.c
+ * File:   GPIO.c
  * Author: Anas Khamees
  *
  * Created on June 2, 2023, 8:10 PM
