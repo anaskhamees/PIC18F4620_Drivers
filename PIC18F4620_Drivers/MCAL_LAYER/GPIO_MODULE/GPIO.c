@@ -4,7 +4,7 @@
  *
  * Created on June 2, 2023, 8:10 PM
  */
-#include "HAL_GPIO.h"
+#include "GPIO.h"
 
 
 volatile uint8 *GPIO_tris_registers[]={&TRISA,&TRISB,&TRISC,&TRISD,&TRISE};
