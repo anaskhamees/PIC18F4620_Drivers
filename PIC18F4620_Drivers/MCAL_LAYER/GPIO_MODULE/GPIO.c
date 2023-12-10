@@ -140,7 +140,7 @@ Std_ReturnType  gpio_pin_read_logic(const pin_config_t *pin_configuration,logic_
     if((NULL !=pin_configuration)&&(NULL !=logic)&&
        ((pin_configuration->pin)<=PIN_MAX_NUMBER-1)&&((pin_configuration->port)<=PORT_MAX_NUMBER-1))
     {
-        *logic=READ_BIT(*GPIO_port_registers[pin_configuration->port],pin_configuration->pin);
+        *logic=READ_BIT(*GPIO_lat_registers[pin_configuration->port],pin_configuration->pin);
     }
     else
     {
@@ -182,7 +182,7 @@ Std_ReturnType  gpio_pin_toggle(const pin_config_t *pin_configuration)
  *          (E_NOT_OK): the function failed.
  */
 #if GPIO_PORT_CONFIGURATION==CONFIG_ENABLE   
-Std_ReturnType  gpio_port_direction_initialization(const port_index_t port,uint8 direction)
+Std_ReturnType  gpio_port_direction_initialization(port_index_t port,uint8 direction)
 {
     Std_ReturnType ret=E_OK;
     if(port<=PORT_MAX_NUMBER)
@@ -207,7 +207,7 @@ Std_ReturnType  gpio_port_direction_initialization(const port_index_t port,uint8
  *          (E_NOT_OK): the function failed.
  */
 #if GPIO_PORT_CONFIGURATION==CONFIG_ENABLE   
-Std_ReturnType  gpio_port_get_direction_status(const port_index_t port,uint8 *direction)
+Std_ReturnType  gpio_port_get_direction_status(port_index_t port,uint8 *direction)
 {
     Std_ReturnType ret=E_OK;
     if(port<=PORT_MAX_NUMBER)
@@ -232,7 +232,7 @@ Std_ReturnType  gpio_port_get_direction_status(const port_index_t port,uint8 *di
  *          (E_NOT_OK): the function failed.
  */
 #if GPIO_PORT_CONFIGURATION==CONFIG_ENABLE   
-Std_ReturnType  gpio_port_write_logic(const port_index_t port,uint8 logic)
+Std_ReturnType  gpio_port_write_logic(port_index_t port,uint8 logic)
 {
      Std_ReturnType ret=E_OK;
     if(port<=PORT_MAX_NUMBER)
@@ -256,7 +256,7 @@ Std_ReturnType  gpio_port_write_logic(const port_index_t port,uint8 logic)
  *          (E_NOT_OK): the function failed.
  */
 #if GPIO_PORT_CONFIGURATION==CONFIG_ENABLE   
-Std_ReturnType  gpio_port_initialization(const port_index_t port)
+Std_ReturnType  gpio_port_initialization(port_index_t port)
 {
      Std_ReturnType ret=E_OK;
     if(port<=PORT_MAX_NUMBER)
@@ -282,7 +282,7 @@ Std_ReturnType  gpio_port_initialization(const port_index_t port)
  *          (E_NOT_OK): the function failed.
  */
 #if GPIO_PORT_CONFIGURATION==CONFIG_ENABLE   
-Std_ReturnType  gpio_port_read_logic(const port_index_t port,uint8 *logic)
+Std_ReturnType  gpio_port_read_logic(port_index_t port,uint8 *logic)
 {
     Std_ReturnType ret=E_OK;
     if(port<=PORT_MAX_NUMBER)
@@ -305,7 +305,7 @@ Std_ReturnType  gpio_port_read_logic(const port_index_t port,uint8 *logic)
  *          (E_NOT_OK): the function failed.
  */
 #if GPIO_PORT_CONFIGURATION==CONFIG_ENABLE   
-Std_ReturnType  gpio_port_toggle(const port_index_t port)
+Std_ReturnType  gpio_port_toggle(port_index_t port)
 {
     Std_ReturnType ret=E_OK;
     if(port<=PORT_MAX_NUMBER)
