@@ -8,7 +8,7 @@
 #define	BUTTON_DRIVER_H
 
 /*------------------------- Includes Section--------------------------------*/
-#include "../../MCAL_LAYER/GPIO_MODULE/HAL_GPIO.h"
+#include "../../MCAL_LAYER/GPIO_MODULE/GPIO.h"
 /*------------------------- Macro(s) Declaration----------------------------*/
 #define BUTTON_MODULE_CONFIGUTATION     CONFIG_ENABLE
 /*------------------------- Macro Functions Declaration-------------------- */
